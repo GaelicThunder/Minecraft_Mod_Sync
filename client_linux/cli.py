@@ -21,6 +21,7 @@ def sync_mods(server_url):
 
         for local_file in list(local_mods.keys()):
             if local_file not in manifest:
+                print(f"Removing {mod}...")
                 os.remove(os.path.join("mods", local_file))
                 del local_mods[local_file]
 
